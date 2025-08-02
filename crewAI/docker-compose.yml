@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  crewai:
+    build: .
+    container_name: crewai-app
+    restart: unless-stopped
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SERPER_API_KEY=${SERPER_API_KEY}
+      # Add other environment variables as needed
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./src:/app/src  # Mount source code for development
+    ports:
+      - "8080:8080"  # Adjust port as needed
+    stdin_open: true
+    tty: true
+    # Override command to run the example crew
+    # command: python example_crew.py

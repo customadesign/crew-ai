@@ -1,0 +1,16 @@
+# Core dependencies
+crewai
+pydantic>=2.4.2
+openai>=1.13.3
+python-dotenv>=1.0.0
+click>=8.1.7
+
+# Optional: Add tools support
+crewai[tools]
+
+# If using specific features, uncomment as needed:
+# crewai[embeddings]
+# crewai[agentops]
+# crewai[mem0]
+# crewai[docling]
+# crewai[aisuite]
