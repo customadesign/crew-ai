@@ -27,5 +27,5 @@ ENV PYTHONUNBUFFERED=1
 # Install the crewai package in development mode
 RUN pip install -e .
 
-# Default command - start an interactive shell or run crewai CLI
-CMD ["python", "-m", "crewai", "--help"]
+# Default command - run the Flask web app
+CMD ["python", "app.py"]

@@ -14,7 +14,7 @@ services:
       - ./data:/app/data
       - ./src:/app/src  # Mount source code for development
     ports:
-      - "8080:8080"  # Adjust port as needed
+      - "80:8080"  # Map port 80 to container port 8080
     stdin_open: true
     tty: true
     # Override command to run the example crew
